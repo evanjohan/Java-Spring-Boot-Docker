@@ -38,7 +38,7 @@ public class ModuleController {
                 message.acknowledge=false;
                 return new ResponseEntity<>(message,HttpStatus.NOT_FOUND);
         }
-        result.acknowledge=false;
+        result.acknowledge=true;
         result.messages="Get data modules by userID "+id+" success!";
         return new ResponseEntity<>(result,HttpStatus.OK);
     }
