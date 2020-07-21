@@ -1,0 +1,27 @@
+version: "3.7"
+services:
+  java-spring-jdbc-container:
+    image: java-spring-jdbc
+    ports:
+      - "8080:8080"
+    networks:
+      - java-spring-mysql
+    depends_on:
+      - mysqldb
+
+  mysqldb:
+    image: mysql:latest
+    ports:
+      - "3307:3306"
+    networks:
+      - java-spring-mysql
+    environment:
+      - MYSQL_ROOT_PASSWORD=root
+    volumes:
+          - ./mysql_data:/data/db
+
+networks:
+  java-spring-mysql:
+
+volumes:
+  mysql_data:
