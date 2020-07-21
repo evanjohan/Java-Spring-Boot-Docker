@@ -4,4 +4,5 @@ DataBase menggunakan MySql , silakan ubah username dan password diubah sesuai ac
 Untuk script DBnya , silakan execute Ecommerce.sql yang ada didalam project.
 Bisa menggunakan Docker:
 1. Pertama lakukan docker build --tag java-spring-jdbc .
-2. setelah image jadi, run docker compose dengan cara docker-compose up -d
+2. images project jadi, run docker compose dengan cara docker-compose up -d
+3. lalu coba hit apinya menggunakan localhost:8080/module (method get)
