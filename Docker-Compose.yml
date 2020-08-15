@@ -23,5 +23,3 @@ services:
 networks:
   java-spring-mysql:
 
-volumes:
-  mysql_data:
